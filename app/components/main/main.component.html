@@ -1,0 +1,27 @@
+<mat-form-field>
+  <mat-label>observable</mat-label>
+  <mat-select class="main" [formControl]="observableControl">
+    <mat-option>RxJs</mat-option>
+    <mat-optgroup *ngFor="let group of observableGroups" [label]="group.name"
+                  [disabled]="group.disabled">
+      <mat-option *ngFor="let observable of group.observable" [value]="observable.value">
+        {{observable.viewValue}}
+      </mat-option>
+    </mat-optgroup>
+  </mat-select>
+</mat-form-field>
+<H2>Для визуализации результата откройте console</H2>
+<hr>
+<div [innerHTML]="textCod"></div>
+
+<div class="ihfo">
+  <a mat-list-item href="http://www.coldfox.ru/article/5beeefda9227d914a1c83fe5/RxJS-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0" target="_blank">
+    <button mat-raised-button color="warn">coldfox</button>
+  </a>
+  <a mat-list-item href="https://rxjs-dev.firebaseapp.com/guide/operators" target="_blank">
+    <button mat-raised-button color="warn">rxjs-dev</button>
+  </a>
+  <a mat-list-item href="https://webdraftt.com/tutorial/angular-and-rxjs" target="_blank">
+    <button mat-raised-button color="warn">webdraftt</button>
+  </a>
+</div>

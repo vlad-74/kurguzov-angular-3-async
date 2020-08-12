@@ -1,0 +1,15 @@
+<mat-form-field>
+  <mat-label>promise</mat-label>
+  <mat-select [formControl]="promiseControl">
+    <mat-option>promise</mat-option>
+    <mat-optgroup *ngFor="let group of promiseGroups" [label]="group.name"
+                  [disabled]="group.disabled">
+      <mat-option *ngFor="let promise of group.promise" [value]="promise.value">
+        {{promise.viewValue}}
+      </mat-option>
+    </mat-optgroup>
+  </mat-select>
+</mat-form-field>
+<H2>Для визуализации результата откройте console</H2>
+<hr>
+<div [innerHTML]="textCod"></div>
