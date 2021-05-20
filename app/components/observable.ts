@@ -283,11 +283,13 @@ export class Rx {
       return githubUser;
     }
 
-    async function showAvatarAwit() {
+    async function showAvatarAwait() {
       console.log('!!!!!!', await showAvatar());
     }
 
-    showAvatar().then(res => { console.log('res', res); });
-    showAvatarAwit();
+    showAvatar().then(res => {
+      console.log('res', res);
+    });
+    showAvatarAwait();
   }
 }
